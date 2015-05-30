@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Contact</title>
+<script src="plugins/jquery.js"></script>
+<script src="plugins/selectize.min.js"></script>
+
+ 
+<!-- BOOTSTRAP-->
+<link rel="stylesheet" href="plugins/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="plugins/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="plugins/bootstrap.min.js"></script>
+
+<!-- <link rel="stylesheet" href="plugins/notUsed/selectize.bootstrap2.css">
+<link rel="stylesheet" href="plugins/notUsed/normalize.css">
+<link rel="stylesheet" href="plugins/notUsed/stylesheet.css">
+ -->
+<link rel="stylesheet" href="plugins/notUsed/selectize.bootstrap3.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="menu.html">Online jídelníček</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Co děláme</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#">Služby</a>
+                    </li> -->
+                    <li>
+                        <a href="contact.html">Kontakty</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+</nav>
+<br><br><br>
+
+<div class="container">
+<div class="jumbotron">
+<div class="row">
+<div class="col-sm-4">
+<h3>Napište mi!</h3>
+<hr>
+<address>
+<!-- <h5>Kontaktní info:</h5><br> -->
+<strong>Jméno.:</strong> Bc. Kateřina Hradecká<br>
+<strong>Vzdělání.:</strong> Karlova Univerzita v Praze (2.LF)<br>
+<strong>Email:</strong> <a href="mailto:katka.hr@centrum.cz">katka.hr@centrum.cz</a><br>
+<!-- <strong>Tel.:</strong> (+420) 607-177-433 -->
+</address>
+			</div>
+				<div class="col-sm-8 contact-form">
+					<form id="contact" method="post" class="form" role="form" action="mailto:vojtech.zbranek@gmail.com" enctype="text/plain">
+						<div class="row">
+							<div class="col-xs-6 col-md-6 form-group">
+								<input class="form-control" id="email" name="email"
+									placeholder="Email" type="email" required />
+							</div>
+							<div class="col-xs-6 col-md-6 form-group">
+								<input class="form-control" id="name" name="name"
+									placeholder="Jméno" type="text" />
+							</div>
+						</div>
+						<textarea class="form-control" id="message" name="message" type="text"
+							placeholder="Zpráva " rows="7"></textarea>
+						<br />
+						<div class="row">
+							<div class="col-xs-12 col-md-12 form-group">
+								<button class="btn btn-primary pull-right" type="submit">Odeslat</button>
+					</form>
+				</div>
+			</div>
+</div>
+</div>
+
+</body>
+</html>

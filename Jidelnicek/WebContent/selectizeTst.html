@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="dist/js/standalone/selectize.js"></script>
+<script src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/css/selectize.css" />
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/stylesheet.css">
+<script src="js/index.js"></script>
+
+<script>
+$(function() {
+    $('select').selectize(options);
+});
+</script>
+</head>
+<body>
+
+<label for="select-beast">Beast:</label>
+<select id="select-beast" class="demo-default">
+<option value="">Select a person...</option>
+<option value="4">Thomas Edison</option>
+<option value="1">Nikola</option>
+<option value="3">Nikola Tesla</option>
+<option value="5">Arnold Schwarzenegger</option>
+</select>
+
+<script>
+$(function() {
+    $('select').selectize(options);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+  display: block;
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Menu</title>
+<script src="plugins/jquery.js"></script>
+<script src="plugins/selectize.min.js"></script>
+
+ 
+<!-- BOOTSTRAP-->
+<link rel="stylesheet" href="plugins/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="plugins/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="plugins/bootstrap.min.js"></script>
+<link rel="stylesheet" href="plugins/selectize.bootstrap3.css">
+
+</head>
+<body>
+<br/><br/><br/>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="menu.html">Online jídelníček</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Co děláme</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#">Služby</a>
+                    </li> -->
+                    <li>
+                        <a href="contact.html">Kontakty</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+</nav>
+		<div class="container">
+			<div class="jumbotron">
+				<h3>Sestavení jídelníčku online:</h3>
+				
+				<div class="col-sm-9">
+				<table >
+					<tr>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1" style="width:150px">Jméno a Přijmení:</span> 
+							<input type="text" class="form-control" placeholder="Vaše jméno a přijmení"
+								aria-describedby="basic-addon1" style="width:250px">
+						</div>
+					</tr>
+					<tr>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1" style="width:150px">Emailová
+								adresa:</span> 
+							<input type="text" class="form-control"
+								placeholder="Vaš email pro dalši komunikaci"
+								aria-describedby="basic-addon1" style="width:250px">
+						</div>
+					</tr>
+				</table>
+				</div>
+				
+				<div class="col-sm-3">
+				<table>
+					<tr>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1" style="width:70px">Výška:</span> <input type="text" class="form-control" placeholder="Vaše výška"
+								aria-describedby="basic-addon1">
+						</div>
+					</tr>
+					<tr>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1" style="width:70px">Váha:
+								</span> <input type="text" class="form-control"
+								placeholder="Vaše váha"
+								aria-describedby="basic-addon1">
+						</div>
+					</tr>
+					<tr>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1" style="width:70px">Věk:
+								</span> <input type="text" class="form-control"
+								placeholder="Váš věk"
+								aria-describedby="basic-addon1">
+						</div>
+					</tr>
+				</table>
+				</div>
+				<br>
+				<br>
+				<br>
+				<br><br><br>
+				<h4>Sestavte svůj jídelníček z posledního týdne:</h4>
+
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						
+
+							<table border="0" cellpadding="5" cellspacing="5">
+								        <col style="width:15%">
+								        <col style="width:10%">
+								        <col style="width:20%">
+										<col style="width:20%">
+								        <col style="width:20%">
+								        <col style="width:20%">
+								        <col style="width:5%">
+								        <col style="width:5%">						
+								<tr>
+									<td>Den:</td>
+									<td>Hodina:</td>
+									<td>Typ Jídla:</td>
+									<td>Kategorie:</td>
+									<td>Podkategorie:</td>
+									<td>Potravina:</td>
+									<td>Množství [g/ks]:</td>
+									<td />
+								</tr>
+								<tr>
+									
+									</td>
+									<td><input type="text" id="date" name="date" class="form-control" />
+									</td>
+									<td><input type="text" id="time" name="time" value="00:00" class="form-control"
+										/></td>
+									<td>
+									<script type="text/javascript">
+										var currentDate = new Date();
+										var day = currentDate.getDate();
+										var month = currentDate.getMonth() + 1;
+										var year = currentDate.getFullYear();
+										document.getElementById('date').value = (day + "/" + month + "/" + year);
+										document.getElementById('time').value = (currentDate.getHours() + ":" + currentDate.getMinutes());
+									</script> 
+									<select id="foodType" name="foodType" placeholder="Vyberte typ jídla...">
+											<option value="">Vyberte typ jídla...</option>
+											<option value="breakfast">Snídaně</option>
+											<option value="snack">Svačina</option>
+											<option value="lunch">Oběd</option>
+											<option value="dinner">Večeře</option>
+											<option value="something">Jen tak něco - v kině, k
+												televizi, ...</option>
+									</select>
+									<td><select id="foodCategory"
+										placeholder="Vyberte kategorii jídla...">
+											<option value="">Vyberte kategorii jídla...</option>
+											<!-- <option value="2">Jogurty</option>
+											<option value="3">Hotovky</option>
+											<option value="4">Neco</option>
+											<option value="5">Neco 2nd</option>
+											<option>Pecivo</option> -->
+									</select> 
+				
+									</td>
+									<td><select id="foodSubcategory" 
+										placeholder="Vyberte podkategorii jídla...">
+											<option value="">Vyberte podkategorii jídla...</option>
+									</select>
+									
+									</td>
+									
+									<td>
+									<select id="food" 
+										placeholder="Vyberte jídlo..." class="form-control"/>>
+											<option value="">Vyberte jídlo...</option>
+									</select>
+									</td>
+									<td><input type="text" id="amount" value="0"
+										class="form-control"/></td>
+									<!-- <td><input type="text" id="foodJson" value="0"
+										class="form-control"/></td>
+										 -->
+									<!-- btn btn-primary -->
+									<td><button onclick="eat()" class="btn btn-primary">Sníst</button>
+										
+									<script>
+/* 									$('select').selectize({
+									});
+*/									
+									</script>	
+								</tr>
+							</table>
+						
+						<!-- /.navbar-collapse -->
+					</div>
+					<!-- /.container-fluid -->
+
+				</nav>
+				<table border="0" cellspacing="5">
+					<tr>
+					    <div class="page-header">
+					    	<h3>Váš jídelníček: <small><button type="button" class="btn-primary">Odeslat jídelníček ke zpracování</button></small></h3>
+					    </div>
+					</tr>
+				</table>
+				<table id="menu" border="1" cellspacing="5" style="font-size: 8pt" class="table table-hover">
+				<thead>
+			      <tr>
+			        	<th>Den:</th>
+						<th>Hodina:</th>
+						<th>Typ Jidla:</th>
+						<th>Kategorie:</th>
+						<th>Podkategorie:</th>
+						<th>Potravina:</th>
+						<th>Množství [g/ks]:</th>
+						<th>Kalorie [kJ]:</th>
+						<th>Bílkoviny [g] :</th>
+						<th>Tuky [g]:</th>
+						<th>Sacharidy [g]:</th>
+						<th>Glykemický index:</th>
+						<th>Cholesterol [mg]:</th>
+						<th>Vláknina [g]:</th>
+						<th/>
+			      </tr>
+			    
+			    </thead>
+			    <tbody>
+			    <tr>
+			    <td><b>Celkem:</b> </td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			    <td></td>
+			  </tr>
+			    </tbody>
+				</table>
+			</div>
+		</div>
+
+
+		<script>
+			function eat() {
+				var table = document.getElementById("menu");
+				var row = table.insertRow(1);
+				row.insertCell(-1).innerHTML = date.value;
+				row.insertCell(-1).innerHTML = time.value;
+				row.insertCell(-1).innerHTML = getOptionText(foodType);
+				row.insertCell(-1).innerHTML = getOptionText(foodCategory);
+				row.insertCell(-1).innerHTML = getOptionText(foodSubcategory);
+				row.insertCell(-1).innerHTML = getOptionText(food);
+				row.insertCell(-1).innerHTML = amount.value;
+
+				var optionElement = getOption(food);
+				//alert("subcategory:" + getOptionText(foodSubcategory) + "food:" + getOptionText(food));
+				var currentFood = foods[getOptionText(food)];
+				//alert("foods[getOptionText(foodSubcategory)][\"energy\"]:" + foods[getOptionText(food)]["energy"]);
+				var unitCount = parseFloat(amount.value);
+
+				var energyUnit = parseFloat(currentFood.energy);
+				var protein = parseFloat(currentFood.protein);
+				var fat = parseFloat(currentFood.fat);
+				var sacharids = parseFloat(currentFood.sacharids);
+				var gi = currentFood.gi;
+				var cholesterol = parseFloat(currentFood.cholesterol);
+				var fiber = parseFloat(currentFood.fiber);
+				
+				row.insertCell(-1).innerHTML = energyUnit * unitCount;
+				row.insertCell(-1).innerHTML = protein * unitCount;
+				row.insertCell(-1).innerHTML = fat * unitCount;
+				row.insertCell(-1).innerHTML = sacharids * unitCount;
+				row.insertCell(-1).innerHTML = gi;
+				row.insertCell(-1).innerHTML = cholesterol * unitCount;
+				row.insertCell(-1).innerHTML = fiber * unitCount;
+				row.insertCell(-1).innerHTML = "<small><button onclick=\"deleteRow(this.parentNode.parentNode.parentNode)\" class=\"btn btn-primary\">X</button></small>";
+				/* var element = document.createElement("button");
+				element.innerHTML = "X";
+				row.appendChild(element) */;
+				
+				recalculate(table); 
+			}
+			
+			function deleteRow(row) {
+				//alert("deleting row: " + JSON.stringify(row));
+				row.parentNode.removeChild(row);
+				recalculate(document.getElementById("menu"));
+			}
+
+			function recalculate(table) {
+				var rows = table.rows;
+				//alert("recalculate: rows: " + rows.length)
+			 	
+				var energy = 0;
+				var protein = 0;
+				var fat = 0;
+				var sacharids = 0;
+				//var gi = 0;
+				var cholesterol = 0;
+				var fiber = 0;
+				
+				for (i = 1; i < rows.length-1; i++) { 
+					var currentRow = rows[i];
+					var energyToAdd = parseInt(currentRow.cells[7].innerHTML);
+					var proteinToAdd = parseFloat(currentRow.cells[8].innerHTML);
+					var fatToAdd = parseFloat(currentRow.cells[9].innerHTML);
+					var sacharidsToAdd = parseFloat(currentRow.cells[10].innerHTML);
+					var fiberToAdd = parseInt(currentRow.cells[13].innerHTML);
+					
+					if (!isNaN(energyToAdd)) {
+						//alert("adding: " + energyToAdd);
+						energy += energyToAdd;
+					}
+					if (!isNaN(proteinToAdd)) {
+						//alert("adding: " + proteinToAdd);
+						protein += proteinToAdd;
+					}
+			
+					if (!isNaN(fatToAdd)) {
+						//alert("adding: " + fatToAdd);
+						fat += fatToAdd;
+					}
+					if (!isNaN(sacharidsToAdd)) {
+						//alert("adding: " + sacharidsToAdd);
+						sacharids += sacharidsToAdd;
+					}
+					if (!isNaN(fiberToAdd)) {
+						//alert("adding: " + fiberToAdd);
+						fiber += fiberToAdd;
+					}
+				}
+				var lastRow = rows[rows.length - 1];
+				lastRow.cells[7].innerHTML = energy;
+				lastRow.cells[8].innerHTML = protein;
+				lastRow.cells[9].innerHTML = fat;
+				lastRow.cells[10].innerHTML = sacharids;
+				//lastRow.cells[11].innerHTML = "";
+				lastRow.cells[12].innerHTML = cholesterol;
+				lastRow.cells[13].innerHTML = fiber; 
+			}
+			
+			var eventHandler = function(name) {
+				 return function() {
+					 //alert(name + "|" + JSON.stringify(arguments));
+					 var categoryName = getOptionText(foodCategory);
+					 var subcategoryName = getOptionText(foodSubcategory);
+					 var foodName = getOptionText(food);
+					 //alert("category: " + categoryName + "subcategory: " + subcategoryName + " food: " + foodName);
+					 reloadOptions(categoryName, subcategoryName, foodName);
+					 
+				 };
+		 	};	
+		 	function reloadOptions(categoryName, subcategoryName, foodName) {
+		 		
+		 		//alert("category: " + categoryName + " subcategory: "+ subcategoryName + "food " + foodName);
+			 	if (foodName) {
+			 		//alert("Selected Food: [" + foodOption + "] Setting and disable category and subcategory");
+			 		/* categories = data.categories;
+			    	foods = data.foods;
+			    	subcategories = data.subcategories; */
+			    	//alert("foodname: " + foodName);
+			    	
+			    	var currentFood = foods[foodName];
+			    	var currectCategory = currentFood.category;
+			    	var currentSubcategory = currentFood.subcategory;
+			    	//alert("foodCategorySelect: " + foodCategory);
+			    	
+			    	/* var categoryOptionToSelect = foodCategory.selectize.getOption(foodName);
+			    	alert(categoryOptionToSelect);
+			    	 */
+			    	 
+			    	//alert("setting current category: " + currectCategory + "and subcategory" + currentSubcategory);
+			    	if(foodCategory.selectize.getValue().localeCompare(currectCategory) != 0) {
+			    		//alert("Previous Category: [" + foodCategory.selectize.getValue() + "] Current: [" + currectCategory + "]");
+			    		foodCategory.selectize.setValue(currectCategory);
+				 		//foodCategory.selectize.disabled = true;
+			    	}
+		    		
+			    	if(foodSubcategory.selectize.getValue().localeCompare(currentSubcategory) != 0) {
+				    	//alert("Previous Subcategory: [" + foodSubcategory.selectize.getValue() + "] Current: [" + currentSubcategory + "]");
+				    	foodSubcategory.selectize.setValue(currentSubcategory);
+				 		//foodSubcategory.selectize.disabled = true;
+			    	}
+			    	//alert("setting DONE");
+			    	 //foodSubcategory.setValue(currectCategory);
+			    	 
+			 		// TODO get food category and subcategory
+			 		// TODO set select option to correct subcategory and category
+			 		// TODO disable options
+			 		
+			 		//foodSubcategory.disabled = true;
+			 	} else if(subcategoryName){
+			 		alert("Selected Subcategory: [" + subcategoryOption+ "] Setting category and list of Foods and disabling categories");
+			 	} else if (categoryName) {
+			 		alert("Selected Category: [" + categoryOption + "] Setting list of Subcategories and Foods");
+			 	} else  {
+			 		alert("Enabling all options.");
+			 	}
+			 	
+		 	}
+			var $select = $('select').selectize({
+				create : true,
+				onChange : eventHandler('onChange'),
+				/*onItemAdd : eventHandler('onItemAdd'),
+				onItemRemove : eventHandler('onItemRemove'),
+				//onOptionAdd : eventHandler('onOptionAdd'),
+				onOptionRemove : eventHandler('onOptionRemove'),
+				onDropdownOpen : eventHandler('onDropdownOpen'),
+				onDropdownClose : eventHandler('onDropdownClose'),
+				onFocus : eventHandler('onFocus'),
+				onBlur : eventHandler('onBlur'),
+				//onInitialize : eventHandler('onInitialize'),
+				 */
+				});
+			
+			function getOptionText(obj) {
+				return getOption(obj).text;
+			}
+			function getOption(obj) {
+				return obj.options[obj.selectedIndex];
+			}
+			
+			$.support.cors = true;
+			
+			$(document).ready(function() {
+				/* if (foods) {
+					alert("Should not load as object is already cached");
+				} */
+				//alert("Document ready");
+			    $.ajax({
+			    	type: "GET",
+			        url: "http://localhost:8080/FoodRestService/menu/all",
+			        //url: "http://167.114.114.60:8080/FoodRestService/menu/all",
+			        //url: "http://37.187.63.125:8080/FoodRestService/menu/all",
+			        error: function (xhr, ajaxOptions, thrownError) {
+			            alert("xhr" + JSON.stringify(xhr));
+			          }
+			    }).then(function(data) {
+			    	//alert("LOADING foods.");	
+			    	categories = data.categories;
+			    	foods = data.foods;
+			    	subcategories = data.subcategories;
+			    	
+			    	//alert(JSON.stringify(foods));
+			    	
+			    	var foodCategory = document.getElementById("foodCategory");
+			    	var foodSubcategory = document.getElementById("foodSubcategory");
+			    	var foodSelect = document.getElementById("food");
+			    	
+			    	var optionIndex = 0;
+			    	for (var categoryName in categories) {
+				        foodCategory.selectize.addOption({value:categoryName,text: categoryName});
+					}
+			    	optionIndex = 0;
+			    	for (var subcategoryName in subcategories) {
+				        foodSubcategory.selectize.addOption({value:subcategoryName,text: subcategoryName});
+					}
+			    	foodSelect.selectize.clearOptions();
+			    	foodSelect.selectize.clearCache("option");
+			    	optionIndex = 0;
+			    	for (var foodName in foods) {
+			    		foodSelect.selectize.addOption({value:foodName,text: foodName});
+			    	}
+			    	//alert("Jidla nahrana.");			    	
+			    });
+			});
+			
+		</script></body>
+
+</body>
+</html>

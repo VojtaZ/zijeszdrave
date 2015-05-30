@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="plugins/selectize.css">
+<link rel="stylesheet" href="plugins/bootstrap.min.css">
+
+<title>Demo tst</title>
+</head>
+<body>
+Test
+<!-- Request sent via a script tag -->
+<script src="http://localhost:8080/FoodRestService/menu/all?callback=apiStatus"></script>
+<!-- Data received as an execution of the predefined function. -->
+<script> 
+	function apiStatus(data) {
+		alert("test");
+		alert(data.status); 
+	} 
+</script>
+</body>
+</html>
